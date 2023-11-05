@@ -1,0 +1,64 @@
+body{
+    background: url(https://1757140519.rsc.cdn77.org/blog/wp-content/uploads/2022/07/E-YDwt3UcAEJ959.jpg) no-repeat center/cover;
+    font-family: monospace;
+    height: 100vh;
+}
+
+.sidebar{
+    width: 300px;
+    height: 100vh;
+    background-color: #000;
+    transform: translateX(-100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all .7s ease-in-out;
+    z-index: 1;
+}
+.sidebar.active{
+    transform: translateX(0);
+}
+.iconbar{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+.sidebar ul li{
+    color: red;
+    background-color: #000; 
+    border-bottom: 2px solid;
+    font-size: 30px;
+    cursor: default;
+}
+.sidebar ul li:last-child{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid;
+    border-bottom: none;
+}
+.sidebar>ul>li:hover{
+    background-color: red;
+    color: #fff;
+}
+.sidebar .cancel i{
+    color: red;
+    padding: 10px;
+    cursor: pointer;
+}
+.backdrop{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.6);
+    cursor: pointer;
+    display: none;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+.backdrop.active{
+    display: block;
+    opacity: 1;
+}
